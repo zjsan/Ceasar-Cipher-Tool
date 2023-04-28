@@ -8,3 +8,16 @@ body
     font-family: sans-serif;
     background-color: beige;
 }
+
+.content1{
+    margin-top: 5rem;
+    
+}
+.content2{
+    margin-top: 5rem;
+}
+#sysname{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+}
