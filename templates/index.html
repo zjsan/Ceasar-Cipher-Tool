@@ -11,75 +11,78 @@
 </div>
 
 <!--for encrypt-->
-<section class="content1">
-    <div id="form1">
-        <form action="">
-            <table>
-                <tr>
-                    <td>
-                        <label for="">Enter Text: </label>
-                        <input type="text">
-                        <input type="submit" value="encrypt">
-                    </td>
-                </tr>
-                <tr>
-                   <td>
-                        <label for="">Encrypted Text: </label>
-                        <input type="text">
-                   </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+<section class="contents">
+    <section class="content1">
+        <div id="form1">
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="">Enter Text: </label>
+                            <input type="text">
+                            <input type="submit" value="encrypt">
+                        </td>
+                    </tr>
+                    <tr>
+                       <td>
+                            <label for="">Encrypted Text: </label>
+                            <input type="text">
+                       </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+    
+    <!--for decrypt-->
+    <section class="content2">
+        <div id="form2">
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="">Enter Text: </label>
+                            <input type="text">
+                            <input type="submit" value="decrypt">
+                        </td>
+                    </tr>
+                    <tr>
+                       <td>
+                            <label for="">Decrypted Text: </label>
+                            <input type="text">
+                       </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+    
+    
+    <section class="content3">
+        <div id="form3">
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="file" id="myFile" name="filename">
+                        </td>
+                    </tr>
+                    <tr>
+                       <td>
+                            <input type="submit" value="encrypt">
+                            <input type="submit" value="decrypt">
+                       </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text">
+                        </td>
+                     </tr>
+                </table>
+            </form>
+        </div>
+    </section>
 </section>
 
-<!--for decrypt-->
-<section class="content2">
-    <div id="form2">
-        <form action="">
-            <table>
-                <tr>
-                    <td>
-                        <label for="">Enter Text: </label>
-                        <input type="text">
-                        <input type="submit" value="decrypt">
-                    </td>
-                </tr>
-                <tr>
-                   <td>
-                        <label for="">Decrypted Text: </label>
-                        <input type="text">
-                   </td>
-                </tr>
-            </table>
-        </form>
-    </div>
-</section>
-
-
-<section class="content3">
-    <div id="form3">
-        <form action="">
-            <table>
-                <tr>
-                    <td>
-                        <input type="file" id="myFile" name="filename">
-                    </td>
-                </tr>
-                <tr>
-                   <td>
-                        <input type="submit" value="encrypt">
-                        <input type="submit" value="decrypt">
-                   </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text">
-                    </td>
-                 </tr>
-            </table>
-        </form>
-    </div>
-</section>
 {% endblock %}
 
