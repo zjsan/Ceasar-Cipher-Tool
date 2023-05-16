@@ -6,7 +6,7 @@ def encrypt(text, shift):
     
     #iterating through every character in the input string
     for i in range(len(text)):
-        char = text[i]
+        char = text[i]#getting individual characters of text then assign it to variable char
 
         #if the text is character is uppercase
         if char.isupper():
