@@ -1,3 +1,5 @@
+import sys
+import os
 
 #cipher_text = (text, shift_key) mod 26 -> 26 characters in English Alphabet
 def encrypt(text, shift):
@@ -59,34 +61,60 @@ def file_input(text_file):
             shift = int(input("Enter the shift value: "))
             encrypted = encrypt(contents, shift)
             print(encrypted)
+            ending_prompt()
         elif option == '2':
             shift = int(input("Enter the shift value: "))
             decrypted = encrypt(contents, shift)
             print(decrypted)
+            ending_prompt()
+
+def ending_prompt():
+
+    print("ENCRYPT OR DECRYPT AGAIN?")
+    print("[Y] - YES")
+    print("[N] - NO")
+    selected = input()
+
+    check_ending(selected)
+
+def check_ending(selected):
+    if selected == 'Y' or 'y':
+        main()
+    else:
+        os._exit(0)
+        
 
 def main():
+
+    program_active = True
+
+    while program_active:
+        print("WELCOME TO CEASAR CYPHER TOOL")
+        print("SELECT THE FOLLOWING OPTIONS TO START")
+        print("[1] = ENCRYPT")
+        print("[2] = DECRYPT")
+        print("[3] = ATTACH FILE")
+        option = input()
     
-    print("WELCOME TO CEASAR CYPHER TOOL")
-    print("SELECT THE FOLLOWING OPTIONS TO START")
-    print("[1] = ENCRYPT")
-    print("[2] = DECRYPT")
-    print("[3] = ATTACH FILE")
-    option = input()
-    
-    if option == '1':
-        text = input("Enter the string: ")
-        shift = int(input("Enter the shift value: "))
-        encrypted = encrypt(text, shift)
-        print(encrypted)
-    elif option == '2':
-        text = input("Enter the string: ")
-        shift = int(input("Enter the shift value: "))
-        decrypted = decrypt(text, shift)
-        print(decrypted)
-    elif option == '3':
-        print("Enter FIle name with file extension: ")
-        input_file = input()
-        file_input(input_file)
-    else:
-        print("Improper Input")
+        if option == '1':
+            text = input("Enter the string: ")
+            shift = int(input("Enter the shift value: "))
+            encrypted = encrypt(text, shift)
+            print(encrypted)
+            ending_prompt()
+
+        elif option == '2':
+            text = input("Enter the string: ")
+            shift = int(input("Enter the shift value: "))
+            decrypted = decrypt(text, shift)
+            print(decrypted)
+            ending_prompt()
+
+        elif option == '3':
+            print("Enter FIle name with file extension: ")
+            input_file = input()
+            file_input(input_file)
+        else:
+             print("Improper Input")
+
 main()
