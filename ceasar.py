@@ -47,6 +47,23 @@ def decrypt(text,shift):
 
     return decrypted_text
 
+def file_input(text_file):
+
+    with open(text_file) as f:
+        contents = f.read()
+        print("[1] - ENCRYPT") 
+        print("[2] - DECRYPT")
+        option = input()
+
+        if option == '1':
+            shift = int(input("Enter the shift value: "))
+            encrypted = encrypt(contents, shift)
+            print(encrypted)
+        elif option == '2':
+            shift = int(input("Enter the shift value: "))
+            decrypted = encrypt(contents, shift)
+            print(decrypted)
+
 def main():
     
     print("WELCOME TO CEASAR CYPHER TOOL")
@@ -67,7 +84,9 @@ def main():
         decrypted = decrypt(text, shift)
         print(decrypted)
     elif option == '3':
-        print("hey")
+        print("Enter FIle name with file extension: ")
+        input_file = input()
+        file_input(input_file)
     else:
         print("Improper Input")
 main()
